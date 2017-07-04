@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+			 xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+			 prism:ViewModelLocator.AutowireViewModel="True"
+			 Title="関東地方"
+			 x:Class="CocosHandsOn01.Views.MainPage">
+	<Grid x:Name="MainGrid" RowSpacing="0">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="*"/>
+		</Grid.RowDefinitions>
+		<StackLayout Grid.Column="0" Grid.Row="1" Padding="10,7,10,0" Margin="0,0,0,0" VerticalOptions="FillAndExpand" Orientation="Vertical">
+			<StackLayout.Spacing>
+				<OnPlatform x:TypeArguments="x:Double">
+					<OnPlatform.iOS>7</OnPlatform.iOS>
+					<OnPlatform.Android>0</OnPlatform.Android>
+				</OnPlatform>
+			</StackLayout.Spacing>
+			<Button HeightRequest="35" BackgroundColor="Gray" TextColor="White" Text="群馬県" FontSize="Micro" Command="{Binding GunmaCommand}" />
+			<Button HeightRequest="35" BackgroundColor="Gray" TextColor="White" Text="栃木県" FontSize="Micro" Command="{Binding TochigiCommand}" />
+			<Button HeightRequest="35" BackgroundColor="Gray" TextColor="White" Text="茨城県" FontSize="Micro" Command="{Binding IbarakiCommand}" />
+			<Button HeightRequest="35" BackgroundColor="Gray" TextColor="White" Text="千葉県" FontSize="Micro" Command="{Binding ChibaCommand}" />
+			<Button HeightRequest="35" BackgroundColor="Gray" TextColor="White" Text="埼玉県" FontSize="Micro" Command="{Binding SaitamaCommand}" />
+			<Button HeightRequest="35" BackgroundColor="Gray" TextColor="White" Text="神奈川県" FontSize="Micro" Command="{Binding KanagawaCommand}" />
+			<Button HeightRequest="35" BackgroundColor="Gray" TextColor="White" Text="東京都" FontSize="Micro" Command="{Binding TokyoCommand}" />
+		</StackLayout>
+	</Grid>
+</ContentPage>
